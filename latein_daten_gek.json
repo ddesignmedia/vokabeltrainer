@@ -1,0 +1,1615 @@
+{
+  "konjugations": [
+    {
+      "title": "Indikativ Präsens Aktiv",
+      "type": "Präsensstamm",
+      "voice": "Aktiv",
+      "mood": "Indikativ",
+      "tense": "Präsens",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocō", "vocās", "vocat"],
+            "plural": ["vocāmus", "vocātis", "vocant"]
+          },
+          "german": {
+            "singular": ["ich rufe", "du rufst", "er/sie/es ruft"],
+            "plural": ["wir rufen", "ihr ruft", "sie rufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habeō", "habēs", "habet"],
+            "plural": ["habēmus", "habētis", "habent"]
+          },
+          "german": {
+            "singular": ["ich habe", "du hast", "er/sie/es hat"],
+            "plural": ["wir haben", "ihr habt", "sie haben"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audiō", "audīs", "audit"],
+            "plural": ["audīmus", "audītis", "audiunt"]
+          },
+          "german": {
+            "singular": ["ich höre", "du hörst", "er/sie/es hört"],
+            "plural": ["wir hören", "ihr hört", "sie hören"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agō", "agis", "agit"],
+            "plural": ["agimus", "agitis", "agunt"]
+          },
+          "german": {
+            "singular": ["ich treibe/handle", "du treibst/handelst", "er/sie/es treibt/handelt"],
+            "plural": ["wir treiben/handeln", "ihr treibt/handelt", "sie treiben/handeln"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["capiō", "capis", "capit"],
+            "plural": ["capimus", "capitis", "capiunt"]
+          },
+          "german": {
+            "singular": ["ich fasse", "du fasst", "er/sie/es fasst"],
+            "plural": ["wir fassen", "ihr fasst", "sie fassen"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Konjunktiv Präsens Aktiv",
+      "type": "Präsensstamm",
+      "voice": "Aktiv",
+      "mood": "Konjunktiv",
+      "tense": "Präsens",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocem", "vocēs", "vocet"],
+            "plural": ["vocēmus", "vocētis", "vocent"]
+          },
+          "german": {
+            "singular": ["ich möge rufen", "du mögest rufen", "er/sie/es möge rufen"],
+            "plural": ["wir mögen rufen", "ihr möget rufen", "sie mögen rufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habeam", "habeās", "habeat"],
+            "plural": ["habeāmus", "habeātis", "habeant"]
+          },
+          "german": {
+            "singular": ["ich möge haben", "du mögest haben", "er/sie/es möge haben"],
+            "plural": ["wir mögen haben", "ihr möget haben", "sie mögen haben"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audiam", "audiās", "audiat"],
+            "plural": ["audiāmus", "audiātis", "audiant"]
+          },
+          "german": {
+            "singular": ["ich möge hören", "du mögest hören", "er/sie/es möge hören"],
+            "plural": ["wir mögen hören", "ihr möget hören", "sie mögen hören"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agam", "agās", "agat"],
+            "plural": ["agāmus", "agātis", "agant"]
+          },
+          "german": {
+            "singular": ["ich möge handeln", "du mögest handeln", "er/sie/es möge handeln"],
+            "plural": ["wir mögen handeln", "ihr möget handeln", "sie mögen handeln"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["capiam", "capiās", "capiat"],
+            "plural": ["capiāmus", "capiātis", "capiant"]
+          },
+          "german": {
+            "singular": ["ich möge fassen", "du mögest fassen", "er/sie/es möge fassen"],
+            "plural": ["wir mögen fassen", "ihr möget fassen", "sie mögen fassen"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Indikativ Imperfekt Aktiv",
+      "type": "Präsensstamm",
+      "voice": "Aktiv",
+      "mood": "Indikativ",
+      "tense": "Imperfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocābam", "vocābās", "vocābat"],
+            "plural": ["vocābāmus", "vocābātis", "vocābant"]
+          },
+          "german": {
+            "singular": ["ich rief", "du riefst", "er/sie/es rief"],
+            "plural": ["wir riefen", "ihr rieft", "sie riefen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habēbam", "habēbās", "habēbat"],
+            "plural": ["habēbāmus", "habēbātis", "habēbant"]
+          },
+          "german": {
+            "singular": ["ich hatte", "du hattest", "er/sie/es hatte"],
+            "plural": ["wir hatten", "ihr hattet", "sie hatten"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audiēbam", "audiēbās", "audiēbat"],
+            "plural": ["audiēbāmus", "audiēbātis", "audiēbant"]
+          },
+          "german": {
+            "singular": ["ich hörte", "du hörtest", "er/sie/es hörte"],
+            "plural": ["wir hörten", "ihr hörtet", "sie hörten"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agēbam", "agēbās", "agēbat"],
+            "plural": ["agēbāmus", "agēbātis", "agēbant"]
+          },
+          "german": {
+            "singular": ["ich trieb/handelte", "du triebst/handeltest", "er/sie/es trieb/handelte"],
+            "plural": ["wir trieben/handelten", "ihr triebt/handeltet", "sie trieben/handelten"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["capiēbam", "capiēbās", "capiēbat"],
+            "plural": ["capiēbāmus", "capiēbātis", "capiēbant"]
+          },
+          "german": {
+            "singular": ["ich fasste", "du fasstest", "er/sie/es fasste"],
+            "plural": ["wir fassten", "ihr fasstet", "sie fassten"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Konjunktiv Imperfekt Aktiv",
+      "type": "Präsensstamm",
+      "voice": "Aktiv",
+      "mood": "Konjunktiv",
+      "tense": "Imperfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocārem", "vocārēs", "vocāret"],
+            "plural": ["vocārēmus", "vocārētis", "vocārent"]
+          },
+          "german": {
+            "singular": ["ich würde rufen", "du würdest rufen", "er/sie/es würde rufen"],
+            "plural": ["wir würden rufen", "ihr würdet rufen", "sie würden rufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habērem", "habērēs", "habēret"],
+            "plural": ["habērēmus", "habērētis", "habērent"]
+          },
+          "german": {
+            "singular": ["ich würde haben", "du würdest haben", "er/sie/es würde haben"],
+            "plural": ["wir würden haben", "ihr würdet haben", "sie würden haben"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audīrem", "audīrēs", "audīret"],
+            "plural": ["audīrēmus", "audīrētis", "audīrent"]
+          },
+          "german": {
+            "singular": ["ich würde hören", "du würdest hören", "er/sie/es würde hören"],
+            "plural": ["wir würden hören", "ihr würdet hören", "sie würden hören"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agerem", "agerēs", "ageret"],
+            "plural": ["agerēmus", "agerētis", "agerent"]
+          },
+          "german": {
+            "singular": ["ich würde handeln", "du würdest handeln", "er/sie/es würde handeln"],
+            "plural": ["wir würden handeln", "ihr würdet handeln", "sie würden handeln"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["caperem", "caperēs", "caperet"],
+            "plural": ["caperēmus", "caperētis", "caperent"]
+          },
+          "german": {
+            "singular": ["ich würde fassen", "du würdest fassen", "er/sie/es würde fassen"],
+            "plural": ["wir würden fassen", "ihr würdet fassen", "sie würden fassen"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Futur I Aktiv",
+      "type": "Präsensstamm",
+      "voice": "Aktiv",
+      "mood": "Indikativ",
+      "tense": "Futur I",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocābō", "vocābis", "vocābit"],
+            "plural": ["vocābimus", "vocābitis", "vocābunt"]
+          },
+          "german": {
+            "singular": ["ich werde rufen", "du wirst rufen", "er/sie/es wird rufen"],
+            "plural": ["wir werden rufen", "ihr werdet rufen", "sie werden rufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habēbō", "habēbis", "habēbit"],
+            "plural": ["habēbimus", "habēbitis", "habēbunt"]
+          },
+          "german": {
+            "singular": ["ich werde haben", "du wirst haben", "er/sie/es wird haben"],
+            "plural": ["wir werden haben", "ihr werdet haben", "sie werden haben"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audiam", "audiēs", "audiet"],
+            "plural": ["audiēmus", "audiētis", "audient"]
+          },
+          "german": {
+            "singular": ["ich werde hören", "du wirst hören", "er/sie/es wird hören"],
+            "plural": ["wir werden hören", "ihr werdet hören", "sie werden hören"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agam", "agēs", "aget"],
+            "plural": ["agēmus", "agētis", "agent"]
+          },
+          "german": {
+            "singular": ["ich werde handeln", "du wirst handeln", "er/sie/es wird handeln"],
+            "plural": ["wir werden handeln", "ihr werdet handeln", "sie werden handeln"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["capiam", "capiēs", "capiet"],
+            "plural": ["capiēmus", "capiētis", "capient"]
+          },
+          "german": {
+            "singular": ["ich werde fassen", "du wirst fassen", "er/sie/es wird fassen"],
+            "plural": ["wir werden fassen", "ihr werdet fassen", "sie werden fassen"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Imperativ Aktiv",
+      "type": "Präsensstamm",
+      "voice": "Aktiv",
+      "mood": "Imperativ",
+      "tense": "Präsens",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocā!"],
+            "plural": ["vocāte!"]
+          },
+          "german": {
+            "singular": ["rufe!"],
+            "plural": ["ruft!"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habē!"],
+            "plural": ["habēte!"]
+          },
+          "german": {
+            "singular": ["habe!"],
+            "plural": ["habt!"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audī!"],
+            "plural": ["audīte!"]
+          },
+          "german": {
+            "singular": ["höre!"],
+            "plural": ["hört!"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["age!"],
+            "plural": ["agite!"]
+          },
+          "german": {
+            "singular": ["handle!"],
+            "plural": ["handelt!"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["cape!"],
+            "plural": ["capite!"]
+          },
+          "german": {
+            "singular": ["fasse!"],
+            "plural": ["fasst!"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Indikativ Perfekt Aktiv",
+      "type": "Perfektstamm",
+      "voice": "Aktiv",
+      "mood": "Indikativ",
+      "tense": "Perfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāvisse",
+          "forms": {
+            "singular": ["vocāvī", "vocāvistī", "vocāvit"],
+            "plural": ["vocāvimus", "vocāvistis", "vocāvērunt"]
+          },
+          "german": {
+            "singular": ["ich habe gerufen", "du hast gerufen", "er/sie/es hat gerufen"],
+            "plural": ["wir haben gerufen", "ihr habt gerufen", "sie haben gerufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habuisse",
+          "forms": {
+            "singular": ["habuī", "habuistī", "habuit"],
+            "plural": ["habuimus", "habuistis", "habuērunt"]
+          },
+          "german": {
+            "singular": ["ich habe gehabt", "du hast gehabt", "er/sie/es hat gehabt"],
+            "plural": ["wir haben gehabt", "ihr habt gehabt", "sie haben gehabt"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīvisse",
+          "forms": {
+            "singular": ["audīvī", "audīvistī", "audīvit"],
+            "plural": ["audīvimus", "audīvistis", "audīvērunt"]
+          },
+          "german": {
+            "singular": ["ich habe gehört", "du hast gehört", "er/sie/es hat gehört"],
+            "plural": ["wir haben gehört", "ihr habt gehört", "sie haben gehört"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "ēgisse",
+          "forms": {
+            "singular": ["ēgī", "ēgistī", "ēgit"],
+            "plural": ["ēgimus", "ēgistis", "ēgērunt"]
+          },
+          "german": {
+            "singular": ["ich habe gehandelt", "du hast gehandelt", "er/sie/es hat gehandelt"],
+            "plural": ["wir haben gehandelt", "ihr habt gehandelt", "sie haben gehandelt"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "cēpisse",
+          "forms": {
+            "singular": ["cēpī", "cēpistī", "cēpit"],
+            "plural": ["cēpimus", "cēpistis", "cēpērunt"]
+          },
+          "german": {
+            "singular": ["ich habe gefasst", "du hast gefasst", "er/sie/es hat gefasst"],
+            "plural": ["wir haben gefasst", "ihr habt gefasst", "sie haben gefasst"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Konjunktiv Perfekt Aktiv",
+      "type": "Perfektstamm",
+      "voice": "Aktiv",
+      "mood": "Konjunktiv",
+      "tense": "Perfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocāverim", "vocāveris", "vocāverit"],
+            "plural": ["vocāverimus", "vocāveritis", "vocāverint"]
+          },
+          "german": {
+            "singular": ["ich habe gerufen", "du habest gerufen", "er/sie/es habe gerufen"],
+            "plural": ["wir haben gerufen", "ihr habet gerufen", "sie haben gerufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habuerim", "habueris", "habuerit"],
+            "plural": ["habuerimus", "habueritis", "habuerint"]
+          },
+          "german": {
+            "singular": ["ich habe gehabt", "du habest gehabt", "er/sie/es habe gehabt"],
+            "plural": ["wir haben gehabt", "ihr habet gehabt", "sie haben gehabt"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audīverim", "audīveris", "audīverit"],
+            "plural": ["audīverimus", "audīveritis", "audīverint"]
+          },
+          "german": {
+            "singular": ["ich habe gehört", "du habest gehört", "er/sie/es habe gehört"],
+            "plural": ["wir haben gehört", "ihr habet gehört", "sie haben gehört"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["ēgerim", "ēgeris", "ēgerit"],
+            "plural": ["ēgerimus", "ēgeritis", "ēgerint"]
+          },
+          "german": {
+            "singular": ["ich habe gehandelt", "du habest gehandelt", "er/sie/es habe gehandelt"],
+            "plural": ["wir haben gehandelt", "ihr habet gehandelt", "sie haben gehandelt"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["cēperim", "cēperis", "cēperit"],
+            "plural": ["cēperimus", "cēperitis", "cēperint"]
+          },
+          "german": {
+            "singular": ["ich habe gefasst", "du habest gefasst", "er/sie/es habe gefasst"],
+            "plural": ["wir haben gefasst", "ihr habet gefasst", "sie haben gefasst"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Indikativ Plusquamperfekt Aktiv",
+      "type": "Perfektstamm",
+      "voice": "Aktiv",
+      "mood": "Indikativ",
+      "tense": "Plusquamperfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocāveram", "vocāverās", "vocāverat"],
+            "plural": ["vocāverāmus", "vocāverātis", "vocāverant"]
+          },
+          "german": {
+            "singular": ["ich hatte gerufen", "du hattest gerufen", "er/sie/es hatte gerufen"],
+            "plural": ["wir hatten gerufen", "ihr hattet gerufen", "sie hatten gerufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habueram", "habuerās", "habuerat"],
+            "plural": ["habuerāmus", "habuerātis", "habuerant"]
+          },
+          "german": {
+            "singular": ["ich hatte gehabt", "du hattest gehabt", "er/sie/es hatte gehabt"],
+            "plural": ["wir hatten gehabt", "ihr hattet gehabt", "sie hatten gehabt"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audīveram", "audīverās", "audīverat"],
+            "plural": ["audīverāmus", "audīverātis", "audīverant"]
+          },
+          "german": {
+            "singular": ["ich hatte gehört", "du hattest gehört", "er/sie/es hatte gehört"],
+            "plural": ["wir hatten gehört", "ihr hattet gehört", "sie hatten gehört"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["ēgeram", "ēgerās", "ēgerat"],
+            "plural": ["ēgerāmus", "ēgerātis", "ēgerant"]
+          },
+          "german": {
+            "singular": ["ich hatte gehandelt", "du hattest gehandelt", "er/sie/es hatte gehandelt"],
+            "plural": ["wir hatten gehandelt", "ihr hattet gehandelt", "sie hatten gehandelt"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["cēperam", "cēperās", "cēperat"],
+            "plural": ["cēperāmus", "cēperātis", "cēperant"]
+          },
+          "german": {
+            "singular": ["ich hatte gefasst", "du hattest gefasst", "er/sie/es hatte gefasst"],
+            "plural": ["wir hatten gefasst", "ihr hattet gefasst", "sie hatten gefasst"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Konjunktiv Plusquamperfekt Aktiv",
+      "type": "Perfektstamm",
+      "voice": "Aktiv",
+      "mood": "Konjunktiv",
+      "tense": "Plusquamperfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocāvissem", "vocāvissēs", "vocāvisset"],
+            "plural": ["vocāvissēmus", "vocāvissētis", "vocāvissent"]
+          },
+          "german": {
+            "singular": ["ich hätte gerufen", "du hättest gerufen", "er/sie/es hätte gerufen"],
+            "plural": ["wir hätten gerufen", "ihr hättet gerufen", "sie hätten gerufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habuissem", "habuissēs", "habuisset"],
+            "plural": ["habuissēmus", "habuissētis", "habuissent"]
+          },
+          "german": {
+            "singular": ["ich hätte gehabt", "du hättest gehabt", "er/sie/es hätte gehabt"],
+            "plural": ["wir hätten gehabt", "ihr hättet gehabt", "sie hätten gehabt"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audīvissem", "audīvissēs", "audīvisset"],
+            "plural": ["audīvissēmus", "audīvissētis", "audīvissent"]
+          },
+          "german": {
+            "singular": ["ich hätte gehört", "du hättest gehört", "er/sie/es hätte gehört"],
+            "plural": ["wir hätten gehört", "ihr hättet gehört", "sie hätten gehört"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["ēgissem", "ēgissēs", "ēgisset"],
+            "plural": ["ēgissēmus", "ēgissētis", "ēgissent"]
+          },
+          "german": {
+            "singular": ["ich hätte gehandelt", "du hättest gehandelt", "er/sie/es hätte gehandelt"],
+            "plural": ["wir hätten gehandelt", "ihr hättet gehandelt", "sie hätten gehandelt"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["cēpissem", "cēpissēs", "cēpisset"],
+            "plural": ["cēpissēmus", "cēpissētis", "cēpissent"]
+          },
+          "german": {
+            "singular": ["ich hätte gefasst", "du hättest gefasst", "er/sie/es hätte gefasst"],
+            "plural": ["wir hätten gefasst", "ihr hättet gefasst", "sie hätten gefasst"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Futur II Aktiv",
+      "type": "Perfektstamm",
+      "voice": "Aktiv",
+      "mood": "Indikativ",
+      "tense": "Futur II",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocāverō", "vocāveris", "vocāverit"],
+            "plural": ["vocāverimus", "vocāveritis", "vocāverint"]
+          },
+          "german": {
+            "singular": ["ich werde gerufen haben", "du wirst gerufen haben", "er/sie/es wird gerufen haben"],
+            "plural": ["wir werden gerufen haben", "ihr werdet gerufen haben", "sie werden gerufen haben"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habuerō", "habueris", "habuerit"],
+            "plural": ["habuerimus", "habueritis", "habuerint"]
+          },
+          "german": {
+            "singular": ["ich werde gehabt haben", "du wirst gehabt haben", "er/sie/es wird gehabt haben"],
+            "plural": ["wir werden gehabt haben", "ihr werdet gehabt haben", "sie werden gehabt haben"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audīverō", "audīveris", "audīverit"],
+            "plural": ["audīverimus", "audīveritis", "audīverint"]
+          },
+          "german": {
+            "singular": ["ich werde gehört haben", "du wirst gehört haben", "er/sie/es wird gehört haben"],
+            "plural": ["wir werden gehört haben", "ihr werdet gehört haben", "sie werden gehört haben"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["ēgerō", "ēgeris", "ēgerit"],
+            "plural": ["ēgerimus", "ēgeritis", "ēgerint"]
+          },
+          "german": {
+            "singular": ["ich werde gehandelt haben", "du wirst gehandelt haben", "er/sie/es wird gehandelt haben"],
+            "plural": ["wir werden gehandelt haben", "ihr werdet gehandelt haben", "sie werden gehandelt haben"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["cēperō", "cēperis", "cēperit"],
+            "plural": ["cēperimus", "cēperitis", "cēperint"]
+          },
+          "german": {
+            "singular": ["ich werde gefasst haben", "du wirst gefasst haben", "er/sie/es wird gefasst haben"],
+            "plural": ["wir werden gefasst haben", "ihr werdet gefasst haben", "sie werden gefasst haben"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Indikativ Präsens Passiv",
+      "type": "Präsensstamm",
+      "voice": "Passiv",
+      "mood": "Indikativ",
+      "tense": "Präsens",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocārī",
+          "forms": {
+            "singular": ["vocor", "vocāris", "vocātur"],
+            "plural": ["vocāmur", "vocāminī", "vocantur"]
+          },
+          "german": {
+            "singular": ["ich werde gerufen", "du wirst gerufen", "er/sie/es wird gerufen"],
+            "plural": ["wir werden gerufen", "ihr werdet gerufen", "sie werden gerufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habērī",
+          "forms": {
+            "singular": ["habeor", "habēris", "habētur"],
+            "plural": ["habēmur", "habēminī", "habentur"]
+          },
+          "german": {
+            "singular": ["ich werde gesehen", "du wirst gesehen", "er/sie/es wird gesehen"],
+            "plural": ["wir werden gesehen", "ihr werdet gesehen", "sie werden gesehen"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīrī",
+          "forms": {
+            "singular": ["audior", "audīris", "audītur"],
+            "plural": ["audīmur", "audīminī", "audiuntur"]
+          },
+          "german": {
+            "singular": ["ich werde gehört", "du wirst gehört", "er/sie/es wird gehört"],
+            "plural": ["wir werden gehört", "ihr werdet gehört", "sie werden gehört"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agī",
+          "forms": {
+            "singular": ["agor", "ageris", "agitur"],
+            "plural": ["agimur", "agiminī", "aguntur"]
+          },
+          "german": {
+            "singular": ["ich werde getrieben", "du wirst getrieben", "er/sie/es wird getrieben"],
+            "plural": ["wir werden getrieben", "ihr werdet getrieben", "sie werden getrieben"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capī",
+          "forms": {
+            "singular": ["capior", "caperis", "capitur"],
+            "plural": ["capimur", "capiminī", "capiuntur"]
+          },
+          "german": {
+            "singular": ["ich werde gefasst", "du wirst gefasst", "er/sie/es wird gefasst"],
+            "plural": ["wir werden gefasst", "ihr werdet gefasst", "sie werden gefasst"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Konjunktiv Präsens Passiv",
+      "type": "Präsensstamm",
+      "voice": "Passiv",
+      "mood": "Konjunktiv",
+      "tense": "Präsens",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocer", "vocēris", "vocētur"],
+            "plural": ["vocēmur", "vocēminī", "vocentur"]
+          },
+          "german": {
+            "singular": ["ich möge gerufen werden", "du mögest gerufen werden", "er/sie/es möge gerufen werden"],
+            "plural": ["wir mögen gerufen werden", "ihr möget gerufen werden", "sie mögen gerufen werden"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habear", "habeāris", "habeātur"],
+            "plural": ["habeāmur", "habeāminī", "habeantur"]
+          },
+          "german": {
+            "singular": ["ich möge gesehen werden", "du mögest gesehen werden", "er/sie/es möge gesehen werden"],
+            "plural": ["wir mögen gesehen werden", "ihr möget gesehen werden", "sie mögen gesehen werden"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audiar", "audiāris", "audiātur"],
+            "plural": ["audiāmur", "audiāminī", "audiantur"]
+          },
+          "german": {
+            "singular": ["ich möge gehört werden", "du mögest gehört werden", "er/sie/es möge gehört werden"],
+            "plural": ["wir mögen gehört werden", "ihr möget gehört werden", "sie mögen gehört werden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agar", "agāris", "agātur"],
+            "plural": ["agāmur", "agāminī", "agantur"]
+          },
+          "german": {
+            "singular": ["ich möge getrieben werden", "du mögest getrieben werden", "er/sie/es möge getrieben werden"],
+            "plural": ["wir mögen getrieben werden", "ihr möget getrieben werden", "sie mögen getrieben werden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["capiar", "capiāris", "capiātur"],
+            "plural": ["capiāmur", "capiāminī", "capiantur"]
+          },
+          "german": {
+            "singular": ["ich möge gefasst werden", "du mögest gefasst werden", "er/sie/es möge gefasst werden"],
+            "plural": ["wir mögen gefasst werden", "ihr möget gefasst werden", "sie mögen gefasst werden"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Indikativ Imperfekt Passiv",
+      "type": "Präsensstamm",
+      "voice": "Passiv",
+      "mood": "Indikativ",
+      "tense": "Imperfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocābar", "vocābāris", "vocābātur"],
+            "plural": ["vocābāmur", "vocābāminī", "vocābantur"]
+          },
+          "german": {
+            "singular": ["ich wurde gerufen", "du wurdest gerufen", "er/sie/es wurde gerufen"],
+            "plural": ["wir wurden gerufen", "ihr wurdet gerufen", "sie wurden gerufen"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habēbar", "habēbāris", "habēbātur"],
+            "plural": ["habēbāmur", "habēbāminī", "habēbantur"]
+          },
+          "german": {
+            "singular": ["ich wurde gesehen", "du wurdest gesehen", "er/sie/es wurde gesehen"],
+            "plural": ["wir wurden gesehen", "ihr wurdet gesehen", "sie wurden gesehen"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audiēbar", "audiēbāris", "audiēbātur"],
+            "plural": ["audiēbāmur", "audiēbāminī", "audiēbantur"]
+          },
+          "german": {
+            "singular": ["ich wurde gehört", "du wurdest gehört", "er/sie/es wurde gehört"],
+            "plural": ["wir wurden gehört", "ihr wurdet gehört", "sie wurden gehört"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agēbar", "agēbāris", "agēbātur"],
+            "plural": ["agēbāmur", "agēbāminī", "agēbantur"]
+          },
+          "german": {
+            "singular": ["ich wurde getrieben", "du wurdest getrieben", "er/sie/es wurde getrieben"],
+            "plural": ["wir wurden getrieben", "ihr wurdet getrieben", "sie wurden getrieben"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["capiēbar", "capiēbāris", "capiēbātur"],
+            "plural": ["capiēbāmur", "capiēbāminī", "capiēbantur"]
+          },
+          "german": {
+            "singular": ["ich wurde gefasst", "du wurdest gefasst", "er/sie/es wurde gefasst"],
+            "plural": ["wir wurden gefasst", "ihr wurdet gefasst", "sie wurden gefasst"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Konjunktiv Imperfekt Passiv",
+      "type": "Präsensstamm",
+      "voice": "Passiv",
+      "mood": "Konjunktiv",
+      "tense": "Imperfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocārer", "vocārēris", "vocārētur"],
+            "plural": ["vocārēmur", "vocārēminī", "vocārentur"]
+          },
+          "german": {
+            "singular": ["ich würde gerufen werden", "du würdest gerufen werden", "er/sie/es würde gerufen werden"],
+            "plural": ["wir würden gerufen werden", "ihr würdet gerufen werden", "sie würden gerufen werden"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habērer", "habērēris", "habērētur"],
+            "plural": ["habērēmur", "habērēminī", "habērentur"]
+          },
+          "german": {
+            "singular": ["ich würde gesehen werden", "du würdest gesehen werden", "er/sie/es würde gesehen werden"],
+            "plural": ["wir würden gesehen werden", "ihr würdet gesehen werden", "sie würden gesehen werden"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audīrer", "audīrēris", "audīrētur"],
+            "plural": ["audīrēmur", "audīrēminī", "audīrentur"]
+          },
+          "german": {
+            "singular": ["ich würde gehört werden", "du würdest gehört werden", "er/sie/es würde gehört werden"],
+            "plural": ["wir würden gehört werden", "ihr würdet gehört werden", "sie würden gehört werden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agerer", "agerēris", "agerētur"],
+            "plural": ["agerēmur", "agerēminī", "agerentur"]
+          },
+          "german": {
+            "singular": ["ich würde getrieben werden", "du würdest getrieben werden", "er/sie/es würde getrieben werden"],
+            "plural": ["wir würden getrieben werden", "ihr würdet getrieben werden", "sie würden getrieben werden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["caperer", "caperēris", "caperētur"],
+            "plural": ["caperēmur", "caperēminī", "caperentur"]
+          },
+          "german": {
+            "singular": ["ich würde gefasst werden", "du würdest gefasst werden", "er/sie/es würde gefasst werden"],
+            "plural": ["wir würden gefasst werden", "ihr würdet gefasst werden", "sie würden gefasst werden"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Futur I Passiv",
+      "type": "Präsensstamm",
+      "voice": "Passiv",
+      "mood": "Indikativ",
+      "tense": "Futur I",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocābor", "vocāberis", "vocābitur"],
+            "plural": ["vocābimur", "vocābiminī", "vocābuntur"]
+          },
+          "german": {
+            "singular": ["ich werde gerufen werden", "du wirst gerufen werden", "er/sie/es wird gerufen werden"],
+            "plural": ["wir werden gerufen werden", "ihr werdet gerufen werden", "sie werden gerufen werden"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habēbor", "habēberis", "habēbitur"],
+            "plural": ["habēbimur", "habēbiminī", "habēbuntur"]
+          },
+          "german": {
+            "singular": ["ich werde gesehen werden", "du wirst gesehen werden", "er/sie/es wird gesehen werden"],
+            "plural": ["wir werden gesehen werden", "ihr werdet gesehen werden", "sie werden gesehen werden"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audiar", "audiēris", "audiētur"],
+            "plural": ["audiēmur", "audiēminī", "audientur"]
+          },
+          "german": {
+            "singular": ["ich werde gehört werden", "du wirst gehört werden", "er/sie/es wird gehört werden"],
+            "plural": ["wir werden gehört werden", "ihr werdet gehört werden", "sie werden gehört werden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["agar", "agēris", "agētur"],
+            "plural": ["agēmur", "agēminī", "agentur"]
+          },
+          "german": {
+            "singular": ["ich werde getrieben werden", "du wirst getrieben werden", "er/sie/es wird getrieben werden"],
+            "plural": ["wir werden getrieben werden", "ihr werdet getrieben werden", "sie werden getrieben werden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["capiar", "capiēris", "capiētur"],
+            "plural": ["capiēmur", "capiēminī", "capientur"]
+          },
+          "german": {
+            "singular": ["ich werde gefasst werden", "du wirst gefasst werden", "er/sie/es wird gefasst werden"],
+            "plural": ["wir werden gefasst werden", "ihr werdet gefasst werden", "sie werden gefasst werden"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Indikativ Perfekt Passiv",
+      "type": "Perfektstamm",
+      "voice": "Passiv",
+      "mood": "Indikativ",
+      "tense": "Perfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocātum, am, um esse",
+          "forms": {
+            "singular": ["vocātus, a, um sum", "vocātus, a, um es", "vocātus, a, um est"],
+            "plural": ["vocātī, ae, a sumus", "vocātī, ae, a estis", "vocātī, ae, a sunt"]
+          },
+          "german": {
+            "singular": ["ich bin gerufen worden", "du bist gerufen worden", "er/sie/es ist gerufen worden"],
+            "plural": ["wir sind gerufen worden", "ihr seid gerufen worden", "sie sind gerufen worden"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habitum, am, um esse",
+          "forms": {
+            "singular": ["habitus, a, um sum", "habitus, a, um es", "habitus, a, um est"],
+            "plural": ["habitī, ae, a sumus", "habitī, ae, a estis", "habitī, ae, a sunt"]
+          },
+          "german": {
+            "singular": ["ich bin gesehen worden", "du bist gesehen worden", "er/sie/es ist gesehen worden"],
+            "plural": ["wir sind gesehen worden", "ihr seid gesehen worden", "sie sind gesehen worden"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audītum, am, um esse",
+          "forms": {
+            "singular": ["audītus, a, um sum", "audītus, a, um es", "audītus, a, um est"],
+            "plural": ["audītī, ae, a sumus", "audītī, ae, a estis", "audītī, ae, a sunt"]
+          },
+          "german": {
+            "singular": ["ich bin gehört worden", "du bist gehört worden", "er/sie/es ist gehört worden"],
+            "plural": ["wir sind gehört worden", "ihr seid gehört worden", "sie sind gehört worden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "āctum, am, um esse",
+          "forms": {
+            "singular": ["āctus, a, um sum", "āctus, a, um es", "āctus, a, um est"],
+            "plural": ["āctī, ae, a sumus", "āctī, ae, a estis", "āctī, ae, a sunt"]
+          },
+          "german": {
+            "singular": ["ich bin getrieben worden", "du bist getrieben worden", "er/sie/es ist getrieben worden"],
+            "plural": ["wir sind getrieben worden", "ihr seid getrieben worden", "sie sind getrieben worden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "captum, am, um esse",
+          "forms": {
+            "singular": ["captus, a, um sum", "captus, a, um es", "captus, a, um est"],
+            "plural": ["captī, ae, a sumus", "captī, ae, a estis", "captī, ae, a sunt"]
+          },
+          "german": {
+            "singular": ["ich bin gefasst worden", "du bist gefasst worden", "er/sie/es ist gefasst worden"],
+            "plural": ["wir sind gefasst worden", "ihr seid gefasst worden", "sie sind gefasst worden"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Konjunktiv Perfekt Passiv",
+      "type": "Perfektstamm",
+      "voice": "Passiv",
+      "mood": "Konjunktiv",
+      "tense": "Perfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocātus, a, um sim", "vocātus, a, um sīs", "vocātus, a, um sit"],
+            "plural": ["vocātī, ae, a sīmus", "vocātī, ae, a sītis", "vocātī, ae, a sint"]
+          },
+          "german": {
+            "singular": ["ich sei gerufen worden", "du seist gerufen worden", "er/sie/es sei gerufen worden"],
+            "plural": ["wir seien gerufen worden", "ihr seiet gerufen worden", "sie seien gerufen worden"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habitus, a, um sim", "habitus, a, um sīs", "habitus, a, um sit"],
+            "plural": ["habitī, ae, a sīmus", "habitī, ae, a sītis", "habitī, ae, a sint"]
+          },
+          "german": {
+            "singular": ["ich sei gesehen worden", "du seist gesehen worden", "er/sie/es sei gesehen worden"],
+            "plural": ["wir seien gesehen worden", "ihr seiet gesehen worden", "sie seien gesehen worden"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audītus, a, um sim", "audītus, a, um sīs", "audītus, a, um sit"],
+            "plural": ["audītī, ae, a sīmus", "audītī, ae, a sītis", "audītī, ae, a sint"]
+          },
+          "german": {
+            "singular": ["ich sei gehört worden", "du seist gehört worden", "er/sie/es sei gehört worden"],
+            "plural": ["wir seien gehört worden", "ihr seiet gehört worden", "sie seien gehört worden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["āctus, a, um sim", "āctus, a, um sīs", "āctus, a, um sit"],
+            "plural": ["āctī, ae, a sīmus", "āctī, ae, a sītis", "āctī, ae, a sint"]
+          },
+          "german": {
+            "singular": ["ich sei getrieben worden", "du seist getrieben worden", "er/sie/es sei getrieben worden"],
+            "plural": ["wir seien getrieben worden", "ihr seiet getrieben worden", "sie seien getrieben worden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["captus, a, um sim", "captus, a, um sīs", "captus, a, um sit"],
+            "plural": ["captī, ae, a sīmus", "captī, ae, a sītis", "captī, ae, a sint"]
+          },
+          "german": {
+            "singular": ["ich sei gefasst worden", "du seist gefasst worden", "er/sie/es sei gefasst worden"],
+            "plural": ["wir seien gefasst worden", "ihr seiet gefasst worden", "sie seien gefasst worden"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Indikativ Plusquamperfekt Passiv",
+      "type": "Perfektstamm",
+      "voice": "Passiv",
+      "mood": "Indikativ",
+      "tense": "Plusquamperfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocātus, a, um eram", "vocātus, a, um erās", "vocātus, a, um erat"],
+            "plural": ["vocātī, ae, a erāmus", "vocātī, ae, a erātis", "vocātī, ae, a erant"]
+          },
+          "german": {
+            "singular": ["ich war gerufen worden", "du warst gerufen worden", "er/sie/es war gerufen worden"],
+            "plural": ["wir waren gerufen worden", "ihr wart gerufen worden", "sie waren gerufen worden"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habitus, a, um eram", "habitus, a, um erās", "habitus, a, um erat"],
+            "plural": ["habitī, ae, a erāmus", "habitī, ae, a erātis", "habitī, ae, a erant"]
+          },
+          "german": {
+            "singular": ["ich war gesehen worden", "du warst gesehen worden", "er/sie/es war gesehen worden"],
+            "plural": ["wir waren gesehen worden", "ihr wart gesehen worden", "sie waren gesehen worden"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audītus, a, um eram", "audītus, a, um erās", "audītus, a, um erat"],
+            "plural": ["audītī, ae, a erāmus", "audītī, ae, a erātis", "audītī, ae, a erant"]
+          },
+          "german": {
+            "singular": ["ich war gehört worden", "du warst gehört worden", "er/sie/es war gehört worden"],
+            "plural": ["wir waren gehört worden", "ihr wart gehört worden", "sie waren gehört worden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["āctus, a, um eram", "āctus, a, um erās", "āctus, a, um erat"],
+            "plural": ["āctī, ae, a erāmus", "āctī, ae, a erātis", "āctī, ae, a erant"]
+          },
+          "german": {
+            "singular": ["ich war getrieben worden", "du warst getrieben worden", "er/sie/es war getrieben worden"],
+            "plural": ["wir waren getrieben worden", "ihr wart getrieben worden", "sie waren getrieben worden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["captus, a, um eram", "captus, a, um erās", "captus, a, um erat"],
+            "plural": ["captī, ae, a erāmus", "captī, ae, a erātis", "captī, ae, a erant"]
+          },
+          "german": {
+            "singular": ["ich war gefasst worden", "du warst gefasst worden", "er/sie/es war gefasst worden"],
+            "plural": ["wir waren gefasst worden", "ihr wart gefasst worden", "sie waren gefasst worden"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Konjunktiv Plusquamperfekt Passiv",
+      "type": "Perfektstamm",
+      "voice": "Passiv",
+      "mood": "Konjunktiv",
+      "tense": "Plusquamperfekt",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocātus, a, um essem", "vocātus, a, um essēs", "vocātus, a, um esset"],
+            "plural": ["vocātī, ae, a essēmus", "vocātī, ae, a essētis", "vocātī, ae, a essent"]
+          },
+          "german": {
+            "singular": ["ich wäre gerufen worden", "du wärest gerufen worden", "er/sie/es wäre gerufen worden"],
+            "plural": ["wir wären gerufen worden", "ihr wäret gerufen worden", "sie wären gerufen worden"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habitus, a, um essem", "habitus, a, um essēs", "habitus, a, um esset"],
+            "plural": ["habitī, ae, a essēmus", "habitī, ae, a essētis", "habitī, ae, a essent"]
+          },
+          "german": {
+            "singular": ["ich wäre gesehen worden", "du wärest gesehen worden", "er/sie/es wäre gesehen worden"],
+            "plural": ["wir wären gesehen worden", "ihr wäret gesehen worden", "sie wären gesehen worden"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audītus, a, um essem", "audītus, a, um essēs", "audītus, a, um esset"],
+            "plural": ["audītī, ae, a essēmus", "audītī, ae, a essētis", "audītī, ae, a essent"]
+          },
+          "german": {
+            "singular": ["ich wäre gehört worden", "du wärest gehört worden", "er/sie/es wäre gehört worden"],
+            "plural": ["wir wären gehört worden", "ihr wäret gehört worden", "sie wären gehört worden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["āctus, a, um essem", "āctus, a, um essēs", "āctus, a, um esset"],
+            "plural": ["āctī, ae, a essēmus", "āctī, ae, a essētis", "āctī, ae, a essent"]
+          },
+          "german": {
+            "singular": ["ich wäre getrieben worden", "du wärest getrieben worden", "er/sie/es wäre getrieben worden"],
+            "plural": ["wir wären getrieben worden", "ihr wäret getrieben worden", "sie wären getrieben worden"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["captus, a, um essem", "captus, a, um essēs", "captus, a, um esset"],
+            "plural": ["captī, ae, a essēmus", "captī, ae, a essētis", "captī, ae, a essent"]
+          },
+          "german": {
+            "singular": ["ich wäre gefasst worden", "du wärest gefasst worden", "er/sie/es wäre gefasst worden"],
+            "plural": ["wir wären gefasst worden", "ihr wäret gefasst worden", "sie wären gefasst worden"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Futur II Passiv",
+      "type": "Perfektstamm",
+      "voice": "Passiv",
+      "mood": "Indikativ",
+      "tense": "Futur II",
+      "classes": [
+        {
+          "name": "a-Konjugation",
+          "infinitive": "vocāre",
+          "forms": {
+            "singular": ["vocātus, a, um erō", "vocātus, a, um eris", "vocātus, a, um erit"],
+            "plural": ["vocātī, ae, a erimus", "vocātī, ae, a eritis", "vocātī, ae, a erunt"]
+          },
+          "german": {
+            "singular": ["ich werde gerufen worden sein", "du wirst gerufen worden sein", "er/sie/es wird gerufen worden sein"],
+            "plural": ["wir werden gerufen worden sein", "ihr werdet gerufen worden sein", "sie werden gerufen worden sein"]
+          }
+        },
+        {
+          "name": "e-Konjugation",
+          "infinitive": "habēre",
+          "forms": {
+            "singular": ["habitus, a, um erō", "habitus, a, um eris", "habitus, a, um erit"],
+            "plural": ["habitī, ae, a erimus", "habitī, ae, a eritis", "habitī, ae, a erunt"]
+          },
+          "german": {
+            "singular": ["ich werde gesehen worden sein", "du wirst gesehen worden sein", "er/sie/es wird gesehen worden sein"],
+            "plural": ["wir werden gesehen worden sein", "ihr werdet gesehen worden sein", "sie werden gesehen worden sein"]
+          }
+        },
+        {
+          "name": "i-Konjugation",
+          "infinitive": "audīre",
+          "forms": {
+            "singular": ["audītus, a, um erō", "audītus, a, um eris", "audītus, a, um erit"],
+            "plural": ["audītī, ae, a erimus", "audītī, ae, a eritis", "audītī, ae, a erunt"]
+          },
+          "german": {
+            "singular": ["ich werde gehört worden sein", "du wirst gehört worden sein", "er/sie/es wird gehört worden sein"],
+            "plural": ["wir werden gehört worden sein", "ihr werdet gehört worden sein", "sie werden gehört worden sein"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (agere-Typ)",
+          "infinitive": "agere",
+          "forms": {
+            "singular": ["āctus, a, um erō", "āctus, a, um eris", "āctus, a, um erit"],
+            "plural": ["āctī, ae, a erimus", "āctī, ae, a eritis", "āctī, ae, a erunt"]
+          },
+          "german": {
+            "singular": ["ich werde getrieben worden sein", "du wirst getrieben worden sein", "er/sie/es wird getrieben worden sein"],
+            "plural": ["wir werden getrieben worden sein", "ihr werdet getrieben worden sein", "sie werden getrieben worden sein"]
+          }
+        },
+        {
+          "name": "konsonantische Konjugation (capere-Typ)",
+          "infinitive": "capere",
+          "forms": {
+            "singular": ["captus, a, um erō", "captus, a, um eris", "captus, a, um erit"],
+            "plural": ["captī, ae, a erimus", "captī, ae, a eritis", "captī, ae, a erunt"]
+          },
+          "german": {
+            "singular": ["ich werde gefasst worden sein", "du wirst gefasst worden sein", "er/sie/es wird gefasst worden sein"],
+            "plural": ["wir werden gefasst worden sein", "ihr werdet gefasst worden sein", "sie werden gefasst worden sein"]
+          }
+        }
+      ]
+    },
+   	
+	
+			    {
+      "title": "esse - Indikativ Präsens",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Präsens",
+      "classes": [
+        { "name": "esse", "infinitive": "esse",
+          "forms": { "singular": ["sum", "es", "est"], "plural": ["sumus", "estis", "sunt"] },
+          "german": { "singular": ["ich bin", "du bist", "er/sie/es ist"], "plural": ["wir sind", "ihr seid", "sie sind"] }
+        }
+      ]
+    },
+    {
+      "title": "esse - Konjunktiv Präsens",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Konjunktiv", "tense": "Präsens",
+      "classes": [
+        { "name": "esse", "infinitive": "esse",
+          "forms": { "singular": ["sim", "sīs", "sit"], "plural": ["sīmus", "sītis", "sint"] },
+          "german": { "singular": ["ich sei", "du sei(e)st", "er/sie/es sei"], "plural": ["wir seien", "ihr seiet", "sie seien"] }
+        }
+      ]
+    },
+    {
+      "title": "esse - Indikativ Imperfekt",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Imperfekt",
+      "classes": [
+        { "name": "esse", "infinitive": "esse",
+          "forms": { "singular": ["eram", "erās", "erat"], "plural": ["erāmus", "erātis", "erant"] },
+          "german": { "singular": ["ich war", "du warst", "er/sie/es war"], "plural": ["wir waren", "ihr wart", "sie waren"] }
+        }
+      ]
+    },
+    {
+      "title": "esse - Konjunktiv Imperfekt",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Konjunktiv", "tense": "Imperfekt",
+      "classes": [
+        { "name": "esse", "infinitive": "esse",
+          "forms": { "singular": ["essem", "essēs", "esset"], "plural": ["essēmus", "essētis", "essent"] },
+          "german": { "singular": ["ich wäre", "du wär(e)st", "er/sie/es wäre"], "plural": ["wir wären", "ihr wäret", "sie wären"] }
+        }
+      ]
+    },
+    {
+      "title": "esse - Indikativ Futur I",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Futur I",
+      "classes": [
+        { "name": "esse", "infinitive": "esse",
+          "forms": { "singular": ["erō", "eris", "erit"], "plural": ["erimus", "eritis", "erunt"] },
+          "german": { "singular": ["ich werde sein", "du wirst sein", "er/sie/es wird sein"], "plural": ["wir werden sein", "ihr werdet sein", "sie werden sein"] }
+        }
+      ]
+    },
+    {
+      "title": "esse - Indikativ Perfekt",
+      "type": "Perfektstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Perfekt",
+      "classes": [
+        { "name": "esse", "infinitive": "fuisse",
+          "forms": { "singular": ["fuī", "fuistī", "fuit"], "plural": ["fuimus", "fuistis", "fuērunt"] },
+          "german": { "singular": ["ich bin gewesen", "du bist gewesen", "er/sie/es ist gewesen"], "plural": ["wir sind gewesen", "ihr seid gewesen", "sie sind gewesen"] }
+        }
+      ]
+    },
+     {
+      "title": "esse - Konjunktiv Perfekt",
+      "type": "Perfektstamm", "voice": "Aktiv", "mood": "Konjunktiv", "tense": "Perfekt",
+      "classes": [
+        { "name": "esse", "infinitive": "fuisse",
+          "forms": { "singular": ["fuerim", "fueris", "fuerit"], "plural": ["fuerimus", "fueritis", "fuerint"] },
+          "german": { "singular": ["ich sei gewesen", "du sei(e)st gewesen", "er/sie/es sei gewesen"], "plural": ["wir seien gewesen", "ihr seiet gewesen", "sie seien gewesen"] }
+        }
+      ]
+    },
+    {
+      "title": "esse - Indikativ Plusquamperfekt",
+      "type": "Perfektstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Plusquamperfekt",
+      "classes": [
+        { "name": "esse", "infinitive": "fuisse",
+          "forms": { "singular": ["fueram", "fuerās", "fuerat"], "plural": ["fuerāmus", "fuerātis", "fuerant"] },
+          "german": { "singular": ["ich war gewesen", "du warst gewesen", "er/sie/es war gewesen"], "plural": ["wir waren gewesen", "ihr wart gewesen", "sie waren gewesen"] }
+        }
+      ]
+    },
+    {
+      "title": "esse - Konjunktiv Plusquamperfekt",
+      "type": "Perfektstamm", "voice": "Aktiv", "mood": "Konjunktiv", "tense": "Plusquamperfekt",
+      "classes": [
+        { "name": "esse", "infinitive": "fuisse",
+          "forms": { "singular": ["fuissem", "fuissēs", "fuisset"], "plural": ["fuissēmus", "fuissētis", "fuissent"] },
+          "german": { "singular": ["ich wäre gewesen", "du wär(e)st gewesen", "er/sie/es wäre gewesen"], "plural": ["wir wären gewesen", "ihr wäret gewesen", "sie wären gewesen"] }
+        }
+      ]
+    },
+    {
+      "title": "esse - Indikativ Futur II",
+      "type": "Perfektstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Futur II",
+      "classes": [
+        { "name": "esse", "infinitive": "fuisse",
+          "forms": { "singular": ["fuerō", "fueris", "fuerit"], "plural": ["fuerimus", "fueritis", "fuerint"] },
+          "german": { "singular": ["ich werde gewesen sein", "du wirst gewesen sein", "er/sie/es wird gewesen sein"], "plural": ["wir werden gewesen sein", "ihr werdet gewesen sein", "sie werden gewesen sein"] }
+        }
+      ]
+    },
+    {
+      "title": "posse - Indikativ Präsens",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Präsens",
+      "classes": [
+        { "name": "posse", "infinitive": "posse",
+          "forms": { "singular": ["possum", "potes", "potest"], "plural": ["possumus", "potestis", "possunt"] },
+          "german": { "singular": ["ich kann", "du kannst", "er/sie/es kann"], "plural": ["wir können", "ihr könnt", "sie können"] }
+        }
+      ]
+    },
+    {
+      "title": "posse - Konjunktiv Präsens",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Konjunktiv", "tense": "Präsens",
+      "classes": [
+        { "name": "posse", "infinitive": "posse",
+          "forms": { "singular": ["possim", "possīs", "possit"], "plural": ["possīmus", "possītis", "possint"] },
+          "german": { "singular": ["ich könne", "du könnest", "er/sie/es könne"], "plural": ["wir können", "ihr könnet", "sie können"] }
+        }
+      ]
+    },
+    {
+      "title": "ire - Indikativ Präsens",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Präsens",
+      "classes": [
+        { "name": "ire", "infinitive": "ire",
+          "forms": { "singular": ["eō", "īs", "it"], "plural": ["īmus", "ītis", "eunt"] },
+          "german": { "singular": ["ich gehe", "du gehst", "er/sie/es geht"], "plural": ["wir gehen", "ihr geht", "sie gehen"] }
+        }
+      ]
+    },
+    {
+      "title": "ferre - Indikativ Präsens Aktiv",
+      "type": "Präsensstamm", "voice": "Aktiv", "mood": "Indikativ", "tense": "Präsens",
+      "classes": [
+        { "name": "ferre", "infinitive": "ferre",
+          "forms": { "singular": ["ferō", "fers", "fert"], "plural": ["ferimus", "fertis", "ferunt"] },
+          "german": { "singular": ["ich trage", "du trägst", "er/sie/es trägt"], "plural": ["wir tragen", "ihr tragt", "sie tragen"] }
+        }
+      ]
+    },
+    {
+      "title": "ferre - Indikativ Präsens Passiv",
+      "type": "Präsensstamm", "voice": "Passiv", "mood": "Indikativ", "tense": "Präsens",
+      "classes": [
+         { "name": "ferre", "infinitive": "ferri",
+          "forms": { "singular": ["feror", "ferris", "fertur"], "plural": ["ferimur", "feriminī", "feruntur"] },
+          "german": { "singular": ["ich werde getragen", "du wirst getragen", "er/sie/es wird getragen"], "plural": ["wir werden getragen", "ihr werdet getragen", "sie werden getragen"] }
+        }
+      ]
+    },
+    {
+      "title": "fieri - Indikativ Präsens",
+      "type": "Präsensstamm", "voice": "Passiv", "mood": "Indikativ", "tense": "Präsens",
+      "classes": [
+         { "name": "fieri", "infinitive": "fieri",
+          "forms": { "singular": ["fīō", "fīs", "fit"], "plural": ["fīmus", "fītis", "fīunt"] },
+          "german": { "singular": ["ich werde (gemacht)", "du wirst (gemacht)", "er/sie/es wird (gemacht)"], "plural": ["wir werden (gemacht)", "ihr werdet (gemacht)", "sie werden (gemacht)"] }
+        }
+      ]
+    }      
+  ]
+}
