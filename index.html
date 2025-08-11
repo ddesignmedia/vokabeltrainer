@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latein-Prüfung: Möge die Syntax mit dir sein!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <header class="text-center mb-3">
+            <h1 class="text-3xl font-bold text-sky-600">Möge die <span class="text-amber-500">Syntax</span> mit dir sein! </h1>
+        </header>
+
+        <div id="chat-area"></div>
+        <div id="question-area" class="mb-2 text-lg text-center font-semibold min-h-[50px]"></div>
+        <div id="choice-area"></div>
+
+        <div id="action-buttons">
+            <button id="hint-button" class="button-style bg-amber-500" disabled>Hinweis</button>
+            <button id="solution-button" class="button-style bg-amber-500" disabled>Lösung</button>
+            <button id="mode-button" class="button-style bg-amber-500">Modus</button>
+            <button id="learning-year-button" class="button-style bg-amber-500">Filter</button>
+            <button id="download-button" class="button-style bg-amber-500">Download</button>
+        </div>
+
+        <div id="missed-items-container">
+            <ul id="missed-items-list" class="list-disc list-inside text-xs pl-2"></ul>
+            <p id="no-missed-items" class="text-xs text-slate-400 italic">Alles richtig bisher, junger Padawan, hmmm!</p>
+        </div>
+
+        <div id="progress-section">
+            <div id="current-rank-title">Aktueller Rang: Jüngling</div>
+            <div class="progress-marker-container">
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar">
+                            <span id="progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-marker-label" style="left: 0%;" data-percent="0"><span class="marker-text">Jüngling</span></div>
+                <div class="progress-marker-label" style="left: 20%;" data-percent="20"><span class="marker-text">Padawan</span></div>
+                <div class="progress-marker-label" style="left: 40%;" data-percent="40"><span class="marker-text">Jedi-Gelehrter</span></div>
+                <div class="progress-marker-label" style="left: 60%;" data-percent="60"><span class="marker-text">Jedi-Ritter</span></div>
+                <div class="progress-marker-label" style="left: 80%;" data-percent="80"><span class="marker-text">Hüter der Syntax</span></div>
+                <div class="progress-marker-label" style="left: 100%;" data-percent="100"><span class="marker-text">Meister d. A. Sprache</span></div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <input type="text" id="user-input" class="input-style" placeholder="Deine Antwort, junger Padawan...">
+            <button id="submit-button" class="button-style bg-sky-500">Senden</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
