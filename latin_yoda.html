@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latein-Prüfung: Möge die Syntax mit dir sein!</title>
+    <style>
+        /* --- Grundlegende Stile & DSGVO-Anpassungen --- */
+        body {
+            /* Ersetzt Google Fonts durch system-native Schriftarten */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #f0f4f8; /* Fallback-Hintergrundfarbe */
+            color: #1e293b;
+            /* Hintergrundbild wieder eingefügt */
+            background-image: url('HG_latin_yoda.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* --- Nachbildung der Tailwind CSS-Klassen --- */
+        .game-container {
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.98);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 40px);
+            max-height: 900px;
+            position: relative;
+        }
+
+        .chat-bubble {
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            line-height: 1.6;
+        }
+
+        .ai-bubble {
+            background-color: #38bdf8;
+            color: white;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+
+        .user-bubble {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .button-style {
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+            min-width: 90px;
+            margin: 2px 4px;
+        }
+
+        .button-style:hover {
+            filter: brightness(90%);
+        }
+
+        .input-style {
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 10px;
+            flex-grow: 1;
+            margin-right: 8px;
+        }
+
+        .input-style:focus {
+            outline: none;
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.4);
+        }
+
+        .disabled-button {
+            background-color: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        .disabled-button:hover {
+            background-color: #94a3b8;
+            filter: none;
+        }
+
+        #chat-area {
+            flex-grow: 1;
+            flex-shrink: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+            margin-bottom: 12px;
+            max-height: 280px;
+            min-height: 100px;
+            background-color: rgba(230, 230, 230, 0.9);
+            border-radius: 12px;
+            border: 4px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; /* Ersetzt space-y-4 */
+        }
+
+        #chat-area::-webkit-scrollbar { width: 8px; }
+        #chat-area::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        #chat-area::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        #chat-area::-webkit-scrollbar-thumb:hover { background: #a0aec0; }
+        
+        #choice-area {
+            margin-top: 0.25rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        #choice-area button {
+            flex-basis: calc(50% - 8px);
+        }
+        
+        #missed-items-container {
+            flex-shrink: 0;
+            max-height: 120px;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.75rem;
+            border: 1px solid #fecdd3;
+            border-radius: 0.375rem;
+            background-color: #fff1f2;
+            max-height: 24rem;
+            overflow-y: auto;
+        }
+        
+        #missed-items-list {
+            list-style-type: disc;
+            list-style-position: inside;
+            font-size: 0.75rem;
+            padding-left: 0.5rem;
+        }
+        
+        #no-missed-items {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        #progress-section {
+            margin-top: 0.75rem;
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        
+        #current-rank-title {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0369a1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-marker-container {
+            position: relative;
+            height: 60px;
+            margin-top: 10px;
+        }
+        
+        .progress-bar-wrapper {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 1.25rem;
+        }
+        
+        .progress-bar-bg {
+            overflow: hidden;
+            height: 100%;
+            text-align: left;
+            border-radius: 9999px;
+            background-color: #cbd5e1;
+            box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.05);
+        }
+        
+        #progress-bar {
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            white-space: nowrap;
+            color: white;
+            justify-content: center;
+            background-image: linear-gradient(to right, #0ea5e9, #10b981);
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 500ms;
+            height: 100%;
+        }
+        
+        #progress-text {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .progress-marker-label {
+            position: absolute;
+            transform: translateX(-50%);
+            font-size: 0.65rem;
+            line-height: 1;
+            color: #475569;
+            white-space: nowrap;
+            padding: 0 2px;
+            z-index: 10;
+        }
+        
+        .progress-marker-label .marker-text {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .progress-marker-label:nth-child(odd) { top: 5px; }
+        .progress-marker-label:nth-child(odd) .marker-text::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 5px;
+            background-color: #64748b;
+        }
+        
+        .progress-marker-label:nth-child(even) { top: 45px; }
+        .progress-marker-label:nth-child(even) .marker-text::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -5px;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 5px;
+            background-color: #64748b;
+        }
+        
+        .progress-marker-label[data-percent="0"] { transform: translateX(0); }
+        .progress-marker-label[data-percent="0"] .marker-text::before { left: 0; transform: translateX(0); }
+        .progress-marker-label[data-percent="100"] { transform: translateX(-100%); }
+        .progress-marker-label[data-percent="100"] .marker-text::before { left: 100%; transform: translateX(-100%); }
+
+        /* Allgemeine Hilfsklassen */
+        .text-center { text-align: center; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-lg { font-size: 1.125rem; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .text-sky-600 { color: #0284c7; }
+        .text-amber-500 { color: #f59e0b; }
+        .text-sky-500 { color: #0ea5e9; }
+        .text-black { color: #000; }
+        .min-h-\[50px\] { min-height: 50px; }
+        #action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .bg-amber-500 { background-color: #f59e0b; }
+        .bg-amber-500:hover { background-color: #d97706; }
+        .bottom-bar {
+            display: flex;
+            margin-top: 0.5rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 0.25rem;
+        }
+        .list-disc { list-style-type: disc; }
+        .list-inside { list-style-position: inside; }
+        .text-xs { font-size: 0.75rem; }
+        .pl-2 { padding-left: 0.5rem; }
+        .text-slate-400 { color: #94a3b8; }
+        .italic { font-style: italic; }
+        .text-rose-500 { color: #f43f5e; }
+        .text-amber-600 { color: #d97706; }
+        .text-yellow-400 { color: #facc15; }
+        .bg-sky-500 { background-color: #0ea5e9; }
+        .bg-sky-500:hover { background-color: #0284c7; }
+        .m-1 { margin: 0.25rem; }
+        .text-sm { font-size: 0.875rem; }
+
+    </style>
+</head>
+<body>
+
+    <div class="game-container">
+        <header class="text-center mb-3">
+            <h1 class="text-3xl font-bold text-sky-600">Möge die <span class="text-amber-500">Syntax</span> mit dir sein! </h1>
+        </header>
+
+        <div id="chat-area"></div>
+        <div id="question-area" class="mb-2 text-lg text-center font-semibold min-h-[50px]"></div>
+        <div id="choice-area"></div>
+
+        <div id="action-buttons">
+            <button id="hint-button" class="button-style bg-amber-500" disabled>Hinweis</button>
+            <button id="solution-button" class="button-style bg-amber-500" disabled>Lösung</button>
+            <button id="mode-button" class="button-style bg-amber-500">Modus</button>
+            <button id="learning-year-button" class="button-style bg-amber-500">Filter</button>
+            <button id="download-button" class="button-style bg-amber-500">Download</button>
+        </div>
+
+        <div id="missed-items-container">
+            <ul id="missed-items-list" class="list-disc list-inside text-xs pl-2"></ul>
+            <p id="no-missed-items" class="text-xs text-slate-400 italic">Alles richtig bisher, junger Padawan, hmmm!</p>
+        </div>
+
+        <div id="progress-section">
+            <div id="current-rank-title">Aktueller Rang: Jüngling</div>
+            <div class="progress-marker-container">
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar">
+                            <span id="progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-marker-label" style="left: 0%;" data-percent="0"><span class="marker-text">Jüngling</span></div>
+                <div class="progress-marker-label" style="left: 20%;" data-percent="20"><span class="marker-text">Padawan</span></div>
+                <div class="progress-marker-label" style="left: 40%;" data-percent="40"><span class="marker-text">Jedi-Gelehrter</span></div>
+                <div class="progress-marker-label" style="left: 60%;" data-percent="60"><span class="marker-text">Jedi-Ritter</span></div>
+                <div class="progress-marker-label" style="left: 80%;" data-percent="80"><span class="marker-text">Hüter der Syntax</span></div>
+                <div class="progress-marker-label" style="left: 100%;" data-percent="100"><span class="marker-text">Meister d. A. Sprache</span></div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <input type="text" id="user-input" class="input-style" placeholder="Deine Antwort, junger Padawan...">
+            <button id="submit-button" class="button-style bg-sky-500">Senden</button>
+        </div>
+    </div>
+
+    <script>
+        // --- Der JavaScript-Code bleibt unverändert, da er keine externen Anfragen sendet. ---
+        // --- Hier wird der gesamte JavaScript-Block aus der Originaldatei eingefügt. ---
+
+        // Global variables
+        let masterVocabularyList = [];
+        let currentLearningYearVocabulary = [];
+        let newConjugationTables = null;
+        let vocabularyModeAvailable = false;
+        let conjugationQuestionList = []; 
+
+        const personNumberMap = [
+            { text: "1. Person Singular", type: "singular", index: 0 },
+            { text: "2. Person Singular", type: "singular", index: 1 },
+            { text: "3. Person Singular", type: "singular", index: 2 },
+            { text: "1. Person Plural", type: "plural", index: 0 },
+            { text: "2. Person Plural", type: "plural", index: 1 },
+            { text: "3. Person Plural", type: "plural", index: 2 }
+        ];
+
+        let currentProgressScore = 0;
+        let missedItems = [];
+
+        // DOM Elements
+        const chatArea = document.getElementById('chat-area');
+        const userInput = document.getElementById('user-input');
+        const submitButton = document.getElementById('submit-button');
+        const hintButton = document.getElementById('hint-button');
+        const solutionButton = document.getElementById('solution-button');
+        const modeButton = document.getElementById('mode-button');
+        const learningYearButton = document.getElementById('learning-year-button');
+        const downloadButton = document.getElementById('download-button');
+        const questionArea = document.getElementById('question-area');
+        const choiceArea = document.getElementById('choice-area');
+
+        // Game State
+        let currentWord = null;
+        let currentConjugationTask = null;
+        let hintsUsed = 0;
+        let previousTaskOutcome = null;
+        let gameState = 'initial';
+        let currentQuizType = '';
+        let currentFilterDisplay = "Alle Lernjahre, Alle Kapitel";
+
+        // --- DATA LOADING ---
+        async function loadGameData() {
+            try {
+                aiSpeak("Daten lade ich, junger Padawan...");
+
+                const [vocabResult, conjResult] = await Promise.allSettled([
+                    fetch('latein_daten.json').catch(e => ({ status: 'error', reason: e })),
+                    // CORRECTED: Fetch the shortened JSON file
+                    fetch('latein_daten_gek.json').catch(e => ({ status: 'error', reason: e }))
+                ]);
+
+                if (vocabResult.status === 'fulfilled' && vocabResult.value.ok) {
+                    const vocabData = await vocabResult.value.json();
+                    masterVocabularyList = vocabData.vocabulary || [];
+                    vocabularyModeAvailable = masterVocabularyList.length > 0;
+                } else {
+                    vocabularyModeAvailable = false;
+                    console.warn("Warnung: Vokabel-Datei 'latein_daten.json' konnte nicht geladen werden.");
+                }
+
+                if (conjResult.status === 'fulfilled' && conjResult.value.ok) {
+                    newConjugationTables = await conjResult.value.json();
+                    if (!newConjugationTables || !newConjugationTables.konjugations || newConjugationTables.konjugations.length === 0) {
+                        throw new Error("Konjugations-Datei ist leer oder hat ein ungültiges Format.");
+                    }
+                } else {
+                     throw new Error(`Kritischer Fehler: Konjugations-Datei konnte nicht geladen werden.`);
+                }
+                
+                buildConjugationQuestionList();
+
+                aiSpeak("Daten geladen, die Macht stark in dir ist!");
+                currentProgressScore = 0;
+                updateProgressBar();
+                requestInitialMode();
+
+            } catch (error) {
+                console.error('Fehler beim Laden der Spieldaten:', error);
+                aiSpeak(`Einen schweren Fehler beim Laden der Daten es gab, hmmm. ${error.message}. Die Konsole prüfen du musst.`);
+                questionArea.innerHTML = `<p class="text-rose-500">Fehler: ${error.message}</p>`;
+                disableActionButtons(true);
+            }
+        }
+        
+        // --- GAME FLOW & MODE/FILTER SELECTION ---
+
+        function requestInitialMode() {
+            gameState = 'awaitingInitialModeChoice';
+            currentQuizType = '';
+            questionArea.innerHTML = '';
+            choiceArea.innerHTML = '';
+            aiSpeak("Was möchtest du lernen, junger Padawan? Tippe <strong class='text-black'>Vokabeln</strong> oder <strong class='text-black'>Konjugation</strong>.");
+            disableActionButtons(true);
+            userInput.value = '';
+            userInput.focus();
+        }
+
+        function handleInitialModeChoice(choice) {
+            choice = choice.toLowerCase().trim();
+            if (choice.includes('vokabel')) {
+                if (!vocabularyModeAvailable) {
+                    aiSpeak("Leider sind keine Vokabeldaten geladen. Der Vokabelmodus ist nicht verfügbar. Möchtest du Konjugationen üben? Tippe 'Konjugation'.");
+                    return;
+                }
+                aiSpeak("Der Weg der Vokabeln, weise er ist. Zuerst die Filter setzen wir müssen.");
+                currentQuizType = 'vocabulary';
+                requestFilters();
+            } else if (choice.includes('konjugation')) {
+                if (conjugationQuestionList && conjugationQuestionList.length > 0) {
+                    aiSpeak("Die Formen der Verben, eine Prüfung sie sind. Bereit du sein musst!");
+                    currentQuizType = 'conjugation';
+                    gameState = 'conjugationQuiz';
+                    missedItems = [];
+                    updateMissedItemsList();
+                    updateProgressBar();
+                    askConjugationQuestion();
+                } else {
+                    aiSpeak("Die Konjugationsdaten sind nicht bereit oder fehlerhaft. Wähle 'Vokabeln', falls verfügbar.");
+                }
+            } else {
+                aiSpeak("Diesen Pfad ich nicht verstehe. 'Vokabeln' oder 'Konjugation' wählen du musst.");
+                userInput.focus();
+            }
+        }
+        
+        function requestMode() {
+            previousTaskOutcome = null;
+            gameState = 'awaitingModeChoice';
+            currentQuizType = '';
+            questionArea.innerHTML = ''; choiceArea.innerHTML = '';
+            aiSpeak("Einen anderen Pfad du wählen möchtest? <strong class='text-black'>Vokabeln</strong> oder <strong class='text-black'>Konjugation</strong> tippen du musst!");
+            disableActionButtons(true);
+            userInput.value = ''; userInput.focus();
+        }
+
+        function handleModeChoice(choice) {
+             handleInitialModeChoice(choice); 
+        }
+        
+        function requestFilters() {
+             if (!vocabularyModeAvailable) {
+                aiSpeak("Der Vokabelmodus ist nicht verfügbar, da keine Vokabeldaten geladen wurden.");
+                requestMode();
+                return;
+            }
+            previousTaskOutcome = null;
+            gameState = 'awaitingFilterChoice';
+            questionArea.innerHTML = ''; choiceArea.innerHTML = '';
+            aiSpeak("Filtere deine Vokabeln, Padawan!<br>Gib Lernjahre ein (z.B. '1', '1,2', '1-3', 'alle').<br>Optional: Füge Kapitel hinzu (z.B. 'K5', 'K10-12', 'alle K').<br>Beispiele: '1 K5', '1,2 K10-12', 'alle K20', '2'.");
+            disableActionButtons(true);
+            userInput.value = ''; userInput.focus();
+        }
+
+        function handleFilterChoice(input) {
+            input = input.trim().toLowerCase();
+            let selectedYearsLocal = []; 
+            let chapterFilterLocal = null;
+            const filterRegex = /^(alle|\d(?:[,-]\d?)*)\s*(?:(?:k|kapitel)\s*(\d+)(?:-(\d+))?)?$/i;
+            const match = input.match(filterRegex);
+
+            if (match) {
+                const yearInput = match[1];
+                const chapterSingleRaw = match[2];
+                const chapterEndRaw = match[3];
+
+                if (yearInput === "alle") {
+                    selectedYearsLocal = ["alle"];
+                } else if (yearInput.includes('-')) {
+                    const parts = yearInput.split('-');
+                    if (parts.length === 2) {
+                        const start = parseInt(parts[0]); const end = parseInt(parts[1]);
+                        if (!isNaN(start) && !isNaN(end) && start <= end && start >= 1 && end <= 3) { 
+                            for (let i = start; i <= end; i++) selectedYearsLocal.push(i);
+                        }
+                    }
+                } else {
+                    selectedYearsLocal = yearInput.split(/[,+]/)
+                                           .map(y => parseInt(y.trim()))
+                                           .filter(yNum => !isNaN(yNum) && yNum >= 1 && yNum <= 3);
+                }
+                
+                if (selectedYearsLocal.length === 0 && yearInput !== "alle") {
+                     aiSpeak("Ungültige Lernjahr-Angabe. Versuche es erneut.");
+                     requestFilters(); return;
+                }
+
+                if (chapterSingleRaw) {
+                    const startChapter = parseInt(chapterSingleRaw);
+                    if (!isNaN(startChapter)) {
+                        if (chapterEndRaw) {
+                            const endChapter = parseInt(chapterEndRaw);
+                            if (!isNaN(endChapter) && startChapter <= endChapter) chapterFilterLocal = { start: startChapter, end: endChapter };
+                            else { aiSpeak("Ungültiger Kapitelbereich."); requestFilters(); return; }
+                        } else chapterFilterLocal = { single: startChapter };
+                    }
+                } else if (input.includes("alle k")) chapterFilterLocal = null;
+                else if (match[2] === undefined && yearInput !== "alle" && selectedYearsLocal.length > 0 && !input.match(/(k|kapitel)/i) ) chapterFilterLocal = null;
+
+                if (selectedYearsLocal.length > 0 || yearInput === "alle") {
+                    currentQuizType = 'vocabulary';
+                    applyFiltersAndStartGame(selectedYearsLocal, chapterFilterLocal);
+                } else {
+                    aiSpeak("Keine gültigen Lernjahre angegeben. Versuche es erneut.");
+                    requestFilters();
+                }
+            } else {
+                aiSpeak("Eingabe nicht verstanden. Beispiel: '1,2 K5' oder 'alle K10-12' oder '2'.");
+                requestFilters();
+            }
+        }
+        
+        function applyFiltersAndStartGame(selectedYearsToFilterBy, chapterFilterToApply) {
+            let tempFilteredVocabulary = [...masterVocabularyList];
+            
+            if (selectedYearsToFilterBy && selectedYearsToFilterBy.length > 0 && !selectedYearsToFilterBy.includes("alle")) {
+                tempFilteredVocabulary = tempFilteredVocabulary.filter(vocab => {
+                    const vocabLearningYear = parseInt(vocab.learning_year);
+                    return !isNaN(vocabLearningYear) && selectedYearsToFilterBy.includes(vocabLearningYear);
+                });
+            }
+
+            if (chapterFilterToApply) {
+                if (chapterFilterToApply.single) {
+                    tempFilteredVocabulary = tempFilteredVocabulary.filter(vocab => {
+                        return typeof vocab.chapter !== 'undefined' && vocab.chapter !== null && parseInt(vocab.chapter) === chapterFilterToApply.single;
+                    });
+                } else if (chapterFilterToApply.start && chapterFilterToApply.end) {
+                    tempFilteredVocabulary = tempFilteredVocabulary.filter(vocab => {
+                        return typeof vocab.chapter !== 'undefined' && vocab.chapter !== null && 
+                               parseInt(vocab.chapter) >= chapterFilterToApply.start && 
+                               parseInt(vocab.chapter) <= chapterFilterToApply.end;
+                    });
+                }
+            }
+            
+            let lyDisplay = "Alle";
+            if (selectedYearsToFilterBy && selectedYearsToFilterBy.length > 0 && !selectedYearsToFilterBy.includes("alle")) {
+                lyDisplay = selectedYearsToFilterBy.join('+');
+            }
+            let chDisplay = "Alle Kapitel";
+            if (chapterFilterToApply) {
+                if (chapterFilterToApply.single) chDisplay = `Kapitel ${chapterFilterToApply.single}`;
+                else if (chapterFilterToApply.start && chapterFilterToApply.end) chDisplay = `Kapitel ${chapterFilterToApply.start}-${chapterFilterToApply.end}`;
+            }
+            currentFilterDisplay = `Lernjahr(e): ${lyDisplay}, ${chDisplay}`;
+
+            if (tempFilteredVocabulary.length > 0) {
+                currentLearningYearVocabulary = tempFilteredVocabulary;
+                aiSpeak(`Filter angewendet. Du übst nun Vokabeln für: ${currentFilterDisplay}.`);
+                currentProgressScore = 0;
+                missedItems = [];
+                previousTaskOutcome = null;
+                updateMissedItemsList();
+                updateProgressBar();
+                initializeGameForCurrentFilters();
+            } else {
+                aiSpeak(`Keine Vokabeln für die Filter: ${currentFilterDisplay}. Andere Auswahl treffen du musst.`);
+                requestFilters();
+            }
+        }
+        
+        function initializeGameForCurrentFilters() {
+            updateMissedItemsList();
+            updateProgressBar();
+            gameState = 'vocabularyQuiz';
+            questionArea.innerHTML = '';
+            choiceArea.innerHTML = '';
+            if (currentLearningYearVocabulary.length > 0) {
+                askVocabularyQuestion();
+            } else {
+                aiSpeak("Ein unerwarteter Fehler: Keine Vokabeln trotz Filterung. Bitte Modus oder Filter ändern.");
+                requestMode();
+            }
+        }
+        
+        // --- CONJUGATION QUIZ LOGIC (REWRITTEN FOR ROBUSTNESS) ---
+        
+        function buildConjugationQuestionList() {
+            conjugationQuestionList = [];
+            if (!newConjugationTables || !newConjugationTables.konjugations) {
+                return;
+            }
+
+            const infinitiveMap = new Map();
+            const praesensAktivGruppe = newConjugationTables.konjugations.find(g => g.title === "Indikativ Präsens Aktiv");
+            if (praesensAktivGruppe && praesensAktivGruppe.classes) {
+                praesensAktivGruppe.classes.forEach(c => {
+                    if (c.name && c.infinitive) infinitiveMap.set(c.name, c.infinitive);
+                });
+            }
+
+            for (const group of newConjugationTables.konjugations) {
+                if (group.type === "Nominalform") continue;
+
+                if (group.classes && Array.isArray(group.classes)) {
+                    for (const verbClass of group.classes) {
+                        if (!verbClass || !verbClass.forms || !verbClass.german) continue;
+                        const baseInfinitive = infinitiveMap.get(verbClass.name) || verbClass.infinitive || 'Unbekannt';
+                        for (const personEntry of personNumberMap) {
+                            const latinFormsArray = verbClass.forms[personEntry.type];
+                            const germanFormsArray = verbClass.german[personEntry.type];
+                            if (Array.isArray(latinFormsArray) && Array.isArray(germanFormsArray) && latinFormsArray.length > personEntry.index && germanFormsArray.length > personEntry.index) {
+                                const latinForm = latinFormsArray[personEntry.index];
+                                const germanForm = germanFormsArray[personEntry.index];
+                                if (latinForm && germanForm) {
+                                    conjugationQuestionList.push({
+                                        latinFormToAsk: latinForm.split(',')[0].trim().replace(/[!]/g, ""),
+                                        correctGermanAnswer: germanForm,
+                                        description: `${group.title}, ${personEntry.text} von ${baseInfinitive}`
+                                    });
+                                }
+                            }
+                        }
+                    }
+                } 
+                else if (group.verb && group.tables && Array.isArray(group.tables)) {
+                    const baseInfinitive = group.verb;
+                    for (const table of group.tables) {
+                        if (!table || !table.tenses_moods || !Array.isArray(table.tenses_moods)) continue;
+                        for (const tenseMood of table.tenses_moods) {
+                            for (const mood of ['Indikativ', 'Konjunktiv']) {
+                                if (tenseMood && tenseMood[mood] && tenseMood.german && tenseMood.german[mood]) {
+                                    for (const personEntry of personNumberMap) {
+                                        const latinFormsArray = tenseMood[mood][personEntry.type];
+                                        const germanFormsArray = tenseMood.german[mood][personEntry.type];
+                                        if (Array.isArray(latinFormsArray) && Array.isArray(germanFormsArray) && latinFormsArray.length > personEntry.index && germanFormsArray.length > personEntry.index) {
+                                            const latinForm = latinFormsArray[personEntry.index];
+                                            const germanForm = germanFormsArray[personEntry.index];
+                                            if (latinForm && germanForm) {
+                                                conjugationQuestionList.push({
+                                                    latinFormToAsk: latinForm.split(',')[0].trim().replace(/[!]/g, ""),
+                                                    correctGermanAnswer: germanForm,
+                                                    description: `${baseInfinitive} - ${tenseMood.tense} ${mood}, ${personEntry.text}`
+                                                });
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            console.log(`Konjugations-Fragenliste erstellt. Anzahl der Fragen: ${conjugationQuestionList.length}`);
+            if(conjugationQuestionList.length === 0 && newConjugationTables.konjugations.length > 0) {
+                 console.error("FEHLER: Die Konjugations-Fragenliste ist nach der Erstellung leer!");
+            }
+        }
+
+
+        function askConjugationQuestion() {
+            if (!conjugationQuestionList || conjugationQuestionList.length === 0) {
+                aiSpeak("Keine Konjugationsfragen gefunden. Der Modus kann nicht gestartet werden.");
+                requestMode();
+                return;
+            }
+
+             if (previousTaskOutcome && previousTaskOutcome.type === 'conjugation') {
+                addMissedItemToList(previousTaskOutcome.data, 'conjugation', previousTaskOutcome.answeredWithHint);
+            }
+            previousTaskOutcome = null;
+            gameState = 'conjugationQuiz';
+            currentQuizType = 'conjugation';
+
+            const taskData = conjugationQuestionList[Math.floor(Math.random() * conjugationQuestionList.length)];
+            currentConjugationTask = { ...taskData }; 
+            
+            hintsUsed = 0;
+            const questionText = `Was bedeutet die Form <strong class="text-sky-500">${currentConjugationTask.latinFormToAsk}</strong> auf Deutsch?`;
+            questionArea.innerHTML = questionText;
+            userInput.value = '';
+            userInput.focus();
+            enableActionButtons();
+            choiceArea.innerHTML = '';
+            updateProgressBar();
+        }
+
+        function checkConjugationAnswer(userAnswer) {
+            if (!currentConjugationTask || userAnswer === null || typeof userAnswer === 'undefined') return;
+
+            const normalizedUserAnswer = normalizeTextForComparison(userAnswer);
+            const correctAnswers = currentConjugationTask.correctGermanAnswer.split('/').map(s => normalizeTextForComparison(s));
+            
+            const isCorrect = correctAnswers.some(answer => normalizedUserAnswer === answer);
+
+            if (isCorrect) {
+                if (hintsUsed === 0) {
+                    currentProgressScore = Math.min(100, currentProgressScore + 2);
+                    missedItems = missedItems.filter(item => !(item.type === 'conjugation' && item.data.latinFormToAsk === currentConjugationTask.latinFormToAsk));
+                    updateMissedItemsList();
+                    previousTaskOutcome = null;
+                } else {
+                    currentProgressScore = Math.min(100, currentProgressScore + 1);
+                    previousTaskOutcome = { type: 'conjugation', data: { ...currentConjugationTask }, answeredWithHint: true };
+                    addMissedItemToList(currentConjugationTask, 'conjugation', true);
+                }
+                updateProgressBar();
+                aiSpeak(`Exzellent! 🏆 <strong class="text-black">${currentConjugationTask.correctGermanAnswer}</strong> ist die richtige Übersetzung für <strong class="text-black">${currentConjugationTask.latinFormToAsk}</strong>.`);
+                questionArea.innerHTML = ""; choiceArea.innerHTML = ''; disableActionButtons();
+                setTimeout(askConjugationQuestion, 2500);
+            } else {
+                 previousTaskOutcome = { type: 'conjugation', data: { ...currentConjugationTask }, answeredWithHint: false };
+                 addMissedItemToList(currentConjugationTask, 'conjugation', false);
+                 aiSpeak(`Fast! <strong class="text-black">'${userAnswer}'</strong> war nicht ganz richtig. Korrekt für <strong class="text-black">${currentConjugationTask.latinFormToAsk}</strong> ist <strong class="text-black">${currentConjugationTask.correctGermanAnswer}</strong>.`);
+                 questionArea.innerHTML = ""; choiceArea.innerHTML = ''; disableActionButtons();
+                 setTimeout(askConjugationQuestion, 3000);
+            }
+            userInput.value = ''; userInput.focus();
+        }
+
+        function giveConjugationHint() {
+            if (!currentConjugationTask || hintsUsed >= 1 || gameState !== 'conjugationQuiz') {
+                if(hintsUsed >= 1) aiSpeak("Hinweis bereits genutzt, junger Padawan.");
+                return;
+            }
+            hintsUsed++;
+            aiSpeak(`Ein Tipp, du brauchst? Die Form <strong class="text-black">${currentConjugationTask.latinFormToAsk}</strong> ist: <strong class="text-black">${currentConjugationTask.description}</strong>.`);
+            if (hintButton) {
+                hintButton.disabled = true;
+                hintButton.classList.add('disabled-button');
+            }
+        }
+
+        function showConjugationSolution() {
+            if (!currentConjugationTask || gameState !== 'conjugationQuiz') return;
+            aiSpeak(`Lösung für <strong class="text-black">${currentConjugationTask.latinFormToAsk}</strong>: <strong class="font-semibold text-black">${currentConjugationTask.correctGermanAnswer}</strong>. (${currentConjugationTask.description})`);
+            addMissedItemToList(currentConjugationTask, 'conjugation', false);
+            updateProgressBar();
+            questionArea.innerHTML = ""; choiceArea.innerHTML = ''; disableActionButtons();
+            setTimeout(askConjugationQuestion, 3000);
+        }
+
+        // --- VOCABULARY QUIZ LOGIC ---
+        
+        function askVocabularyQuestion() {
+            if (!vocabularyModeAvailable || currentLearningYearVocabulary.length === 0) {
+                aiSpeak("Keine Vokabeln für Auswahl. Filter/Modus ändern.");
+                disableActionButtons(); requestMode(); return;
+            }
+            if (previousTaskOutcome && previousTaskOutcome.type === 'vocabulary') {
+                 addMissedItemToList(previousTaskOutcome.data, 'vocabulary', previousTaskOutcome.answeredWithHint);
+            }
+            previousTaskOutcome = null;
+            gameState = 'vocabularyQuiz'; currentQuizType = 'vocabulary';
+            currentWord = currentLearningYearVocabulary[Math.floor(Math.random() * currentLearningYearVocabulary.length)];
+            hintsUsed = 0;
+            questionArea.innerHTML = `Was heißt <strong class="text-sky-500">${currentWord.latin}</strong> auf Deutsch? (${currentFilterDisplay})`;
+            userInput.value = ''; userInput.focus(); enableActionButtons(); choiceArea.innerHTML = '';
+            updateProgressBar();
+        }
+
+        function checkVocabularyAnswer(userAnswer) {
+            if (!currentWord || userAnswer === null || typeof userAnswer === 'undefined') return;
+            const correctNormalizedIndividualAnswers = currentWord.german.flatMap(g => g.split(/[,;]/).map(part => normalizeTextForComparison(part.trim())).filter(part => part.length > 0));
+            const potentialAnswerParts = userAnswer.split(/[,;]/).map(part => normalizeTextForComparison(part.trim())).filter(part => part.length > 0);
+            let isCorrect = false; let matchedNormalizedAnswer = null;
+
+            for (const part of potentialAnswerParts) {
+                if (correctNormalizedIndividualAnswers.includes(part)) { isCorrect = true; matchedNormalizedAnswer = part; break; }
+            }
+            if (!isCorrect) {
+                const fullyNormalizedUserAnswer = normalizeTextForComparison(userAnswer);
+                if (correctNormalizedIndividualAnswers.includes(fullyNormalizedUserAnswer)) { isCorrect = true; matchedNormalizedAnswer = fullyNormalizedUserAnswer; }
+            }
+            let partialMatchButCorrect = false;
+            if (isCorrect && correctNormalizedIndividualAnswers.length > 1 && potentialAnswerParts.length < correctNormalizedIndividualAnswers.length) {
+                 if (correctNormalizedIndividualAnswers.filter(cn => potentialAnswerParts.includes(cn)).length === potentialAnswerParts.length) partialMatchButCorrect = true;
+                 else isCorrect = false;
+            }
+
+            if (isCorrect) {
+                if (hintsUsed === 0) {
+                    currentProgressScore = Math.min(100, currentProgressScore + 2);
+                    missedItems = missedItems.filter(item => !(item.type === 'vocabulary' && item.data.latin === currentWord.latin));
+                    updateMissedItemsList();
+                    previousTaskOutcome = null;
+                    if (partialMatchButCorrect) aiSpeak(`Sehr gut! <strong class="text-black">'${userAnswer}'</strong> ist eine korrekte Bedeutung von <strong class="text-black">'${currentWord.latin}'</strong>. Auch: <strong class="text-black">${correctNormalizedIndividualAnswers.filter(cn => cn !== matchedNormalizedAnswer).join(' / ') || 'keine weiteren'}</strong>.`);
+                    else aiSpeak(`Perfekt! <strong class="text-black">'${currentWord.latin}'</strong> ist <strong class="text-black">'${currentWord.german.join(' / ')}'</strong>.`);
+                } else {
+                    currentProgressScore = Math.min(100, currentProgressScore + 1);
+                    previousTaskOutcome = { type: 'vocabulary', data: { ...currentWord }, answeredWithHint: true };
+                    addMissedItemToList(currentWord, 'vocabulary', true);
+                    aiSpeak(`Mit Tipp geklappt! <strong class="text-black">'${currentWord.latin}'</strong> ist <strong class="text-black">'${currentWord.german.join(' / ')}'</strong>.`);
+                }
+                updateProgressBar();
+                questionArea.innerHTML = ""; choiceArea.innerHTML = ''; disableActionButtons();
+                setTimeout(askVocabularyQuestion, 2500);
+            } else {
+                previousTaskOutcome = { type: 'vocabulary', data: { ...currentWord }, answeredWithHint: false };
+                addMissedItemToList(currentWord, 'vocabulary', false);
+                if (hintsUsed > 0) {
+                    aiSpeak(`Leider nicht richtig für <strong class="text-black">'${currentWord.latin}'</strong>. Korrekt: <strong class="text-black">${currentWord.german.join(' / ')}</strong>.`);
+                    questionArea.innerHTML = ""; choiceArea.innerHTML = ''; disableActionButtons();
+                    setTimeout(askVocabularyQuestion, 2500); return;
+                } else {
+                    aiSpeak(`Nicht ganz richtig für <strong class="text-black">'${currentWord.latin}'</strong>. Deine Antwort: <strong class="text-black">'${userAnswer}'</strong>. 🤔`);
+                    if (hintsUsed < 1) aiSpeak("Tipp mit Auswahl? Klicke 💡 Hinweis!");
+                    else aiSpeak("Nochmal versuchen oder 🆘 Lösung prüfen.");
+                    enableActionButtons();
+                }
+            }
+            userInput.value = ''; userInput.focus();
+        }
+
+        function giveVocabularyHint() {
+            if (!currentWord || hintsUsed >= 1 || gameState !== 'vocabularyQuiz') {
+                if (hintsUsed >= 1 && gameState === 'vocabularyQuiz') aiSpeak("Tipp bereits erhalten!");
+                else if (gameState !== 'vocabularyQuiz' && currentQuizType === 'vocabulary') aiSpeak("Falscher Modus für Vokabel-Hinweis.");
+                else aiSpeak("Kein Wort für Tipp ausgewählt.");
+                if (hintsUsed >= 1 && hintButton) { hintButton.disabled = true; hintButton.classList.add('disabled-button');}
+                return;
+            }
+            hintsUsed++;
+            aiSpeak("Geduld du haben musst. Optionen ich dir zeige.");
+            const correctAnswerForChoices = currentWord.german[0];
+            let distractors = [];
+            const tempVocab = [...currentLearningYearVocabulary];
+            for (let i = tempVocab.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [tempVocab[i], tempVocab[j]] = [tempVocab[j], tempVocab[i]]; }
+            for (const voc of tempVocab) {
+                if (distractors.length >= 3) break;
+                const germanMeaning = voc.german[0];
+                if (normalizeTextForComparison(germanMeaning) !== normalizeTextForComparison(correctAnswerForChoices) && !distractors.includes(germanMeaning)) distractors.push(germanMeaning);
+            }
+            const fallbackDistractors = ["Apfel", "Haus", "Weg", "Licht", "Wasser", "Freund"];
+            let fallbackIndex = 0;
+            while(distractors.length < 3) {
+                const pD = fallbackDistractors[fallbackIndex % fallbackDistractors.length];
+                 if (normalizeTextForComparison(pD) !== normalizeTextForComparison(correctAnswerForChoices) && !distractors.includes(pD)) distractors.push(pD);
+                fallbackIndex++;
+                 if (fallbackIndex > fallbackDistractors.length * 3 && distractors.length < 3) distractors.push(`Zufallsoption ${distractors.length + 1}`);
+            }
+            const choices = [correctAnswerForChoices, ...distractors];
+            for (let i = choices.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [choices[i], choices[j]] = [choices[j], choices[i]];}
+            choiceArea.innerHTML = '';
+            questionArea.innerHTML = `Was heißt <strong class="text-yellow-400">${currentWord.latin}</strong>? Wähle aus:`;
+            choices.forEach(choice => {
+                const button = document.createElement('button');
+                button.className = 'button-style bg-sky-500 m-1 text-sm';
+                button.textContent = choice;
+                button.addEventListener('click', () => { userSpeak(`Meine Wahl: ${choice}`); checkVocabularyAnswer(choice); choiceArea.innerHTML = ''; });
+                choiceArea.appendChild(button);
+            });
+            if(hintButton) {hintButton.disabled = true; hintButton.classList.add('disabled-button');}
+        }
+        
+        function showVocabularySolution() {
+            if (!currentWord) return;
+            aiSpeak(`Lösung für <strong class="text-black">${currentWord.latin}</strong>: <strong class="font-semibold text-black">${currentWord.german.join(' / ')}</strong>.`);
+            addMissedItemToList(currentWord, 'vocabulary', false);
+            updateProgressBar();
+            questionArea.innerHTML = ""; choiceArea.innerHTML = ''; disableActionButtons();
+            setTimeout(askVocabularyQuestion, 2500);
+        }
+
+        // --- UTILITY & UI FUNCTIONS ---
+        
+        function addMissedItemToList(itemData, type, answeredWithHint) {
+            missedItems = missedItems.filter(entry => {
+                if (entry.type !== type) return true;
+                if (type === 'vocabulary') return entry.data.latin !== itemData.latin;
+                if (type === 'conjugation') return entry.data.latinFormToAsk !== itemData.latinFormToAsk;
+                return true;
+            });
+            missedItems.push({ type: type, data: { ...itemData }, answeredWithHint: answeredWithHint });
+            updateMissedItemsList();
+        }
+
+        function updateMissedItemsList() {
+            missedItems.sort((a, b) => {
+                if (a.answeredWithHint === false && b.answeredWithHint === true) return -1;
+                if (a.answeredWithHint === true && b.answeredWithHint === false) return 1;
+                return 0;
+            });
+            const listElement = document.getElementById('missed-items-list');
+            const noMissedElement = document.getElementById('no-missed-items');
+            listElement.innerHTML = '';
+            if (missedItems.length === 0) {
+                listElement.style.display = 'none';
+                noMissedElement.style.display = 'block';
+            } else {
+                listElement.style.display = 'block';
+                noMissedElement.style.display = 'none';
+                missedItems.forEach(item => {
+                    const listItem = document.createElement('li');
+                    if (item.type === 'vocabulary') {
+                        listItem.textContent = `Vokabel: ${item.data.latin} – ${item.data.german.join(' / ')}`;
+                    } else if (item.type === 'conjugation') {
+                         listItem.textContent = `Latein: ${item.data.latinFormToAsk} – Korrekt: ${item.data.correctGermanAnswer} (${item.data.description})`;
+                    }
+                    listItem.classList.remove('text-rose-500', 'text-amber-600');
+                    if (item.answeredWithHint === true) listItem.classList.add('text-amber-600');
+                    else listItem.classList.add('text-rose-500');
+                    listElement.appendChild(listItem);
+                });
+            }
+        }
+
+        function updateProgressBar() {
+            const displayProgressPercentage = Math.min(100, Math.max(0, currentProgressScore));
+            const progressBarElement = document.getElementById('progress-bar');
+            const progressTextElement = document.getElementById('progress-text');
+            const currentRankElement = document.getElementById('current-rank-title');
+
+            if (progressBarElement && progressTextElement && currentRankElement) {
+                progressBarElement.style.width = `${displayProgressPercentage.toFixed(0)}%`;
+                progressTextElement.textContent = `${displayProgressPercentage.toFixed(0)}%`;
+                let rank = "Jüngling";
+                if (displayProgressPercentage >= 100) rank = "Meister d. A. Sprache";
+                else if (displayProgressPercentage >= 80) rank = "Hüter der Syntax";
+                else if (displayProgressPercentage >= 60) rank = "Jedi-Ritter";
+                else if (displayProgressPercentage >= 40) rank = "Jedi-Gelehrter";
+                else if (displayProgressPercentage >= 20) rank = "Padawan";
+                currentRankElement.textContent = `Aktueller Rang: ${rank}`;
+            }
+        }
+
+        function disableActionButtons(disableModeAndFilterToo = false) {
+            if (hintButton) { hintButton.disabled = true; hintButton.classList.add('disabled-button'); }
+            if (solutionButton) { solutionButton.disabled = true; solutionButton.classList.add('disabled-button'); }
+            if (downloadButton) { downloadButton.disabled = true; downloadButton.classList.add('disabled-button');}
+            if (disableModeAndFilterToo) {
+                if (modeButton) { modeButton.disabled = true; modeButton.classList.add('disabled-button');}
+                if (learningYearButton) { learningYearButton.disabled = true; learningYearButton.classList.add('disabled-button');}
+            }
+        }
+
+        function enableActionButtons() {
+            if (hintButton) { hintButton.disabled = false; hintButton.classList.remove('disabled-button'); }
+            if (solutionButton) { solutionButton.disabled = false; solutionButton.classList.remove('disabled-button'); }
+            if (modeButton) { modeButton.disabled = false; modeButton.classList.remove('disabled-button');}
+            if (downloadButton) { downloadButton.disabled = false; downloadButton.classList.remove('disabled-button');}
+            if (learningYearButton) {
+                if (currentQuizType === 'vocabulary' || gameState === 'awaitingFilterChoice' || gameState === 'awaitingInitialModeChoice' || gameState === 'awaitingModeChoice') {
+                    learningYearButton.disabled = !vocabularyModeAvailable;
+                    if(vocabularyModeAvailable) learningYearButton.classList.remove('disabled-button');
+                    else learningYearButton.classList.add('disabled-button');
+                } else {
+                    learningYearButton.disabled = true; learningYearButton.classList.add('disabled-button');
+                }
+            }
+            if (hintsUsed >= 1 && (gameState === 'vocabularyQuiz' || gameState === 'conjugationQuiz') && hintButton) {
+                 hintButton.disabled = true; hintButton.classList.add('disabled-button');
+            }
+        }
+
+        function aiSpeak(message) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('chat-bubble', 'ai-bubble');
+            bubble.innerHTML = message; chatArea.appendChild(bubble); scrollToBottom();
+        }
+        function userSpeak(message) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('chat-bubble', 'user-bubble');
+            bubble.textContent = message; chatArea.appendChild(bubble); scrollToBottom();
+        }
+        function scrollToBottom() { chatArea.scrollTop = chatArea.scrollHeight; }
+        
+        function normalizeTextForComparison(text) {
+            if (typeof text !== 'string' || !text) return '';
+            let normalized = text.toLowerCase().trim();
+            normalized = normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            normalized = normalized.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "");
+            normalized = normalized.replace(/\s+/g, ' ').trim();
+            return normalized;
+        }
+        
+        function decodeHtmlEntities(text) { const ta = document.createElement('textarea'); ta.innerHTML = text; return ta.value; }
+
+        function downloadMissedItemsAsTXT() {
+            if (missedItems.length === 0) { aiSpeak("Keine verpassten Aufgaben zum Herunterladen!"); return; }
+            let content = "Verpasste Aufgaben:\n\n";
+            missedItems.forEach(item => {
+                const itemText = item.type === 'vocabulary'
+                    ? `Vokabel: ${decodeHtmlEntities(item.data.latin)} – ${decodeHtmlEntities(item.data.german.join(' / '))}`
+                    : `Konjugation: ${decodeHtmlEntities(item.data.latinFormToAsk)} – Korrekt: ${decodeHtmlEntities(item.data.correctGermanAnswer)} (${decodeHtmlEntities(item.data.description)})`;
+                content += itemText + '\n';
+            });
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'verpasste_aufgaben.txt';
+            document.body.appendChild(link); link.click(); document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+            aiSpeak("Liste der verpassten Aufgaben heruntergeladen.");
+        }
+
+        // --- EVENT LISTENERS ---
+        submitButton.addEventListener('click', () => {
+            const text = userInput.value.trim();
+            if (text) {
+                userSpeak(text);
+                if (gameState === 'awaitingInitialModeChoice' || gameState === 'awaitingModeChoice') handleModeChoice(text);
+                else if (gameState === 'awaitingFilterChoice') handleFilterChoice(text);
+                else if (currentQuizType === 'vocabulary') checkVocabularyAnswer(text);
+                else if (currentQuizType === 'conjugation') checkConjugationAnswer(text);
+                userInput.value = '';
+            }
+        });
+        
+        userInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') submitButton.click(); });
+        
+        hintButton.addEventListener('click', () => {
+            if (currentQuizType === 'vocabulary') giveVocabularyHint();
+            else if (currentQuizType === 'conjugation') giveConjugationHint();
+        });
+        
+        solutionButton.addEventListener('click', () => {
+            choiceArea.innerHTML = '';
+            if (currentQuizType === 'vocabulary') showVocabularySolution();
+            else if (currentQuizType === 'conjugation') showConjugationSolution();
+        });
+        
+        if (modeButton) modeButton.addEventListener('click', () => { aiSpeak("Moduswechsel du wünschst?"); requestMode(); });
+        
+        if (learningYearButton) {
+            learningYearButton.addEventListener('click', () => {
+                if (currentQuizType === 'vocabulary' || gameState === 'awaitingInitialModeChoice' || gameState === 'awaitingModeChoice') {
+                     if (!vocabularyModeAvailable) {
+                        aiSpeak("Der Vokabelmodus ist nicht verfügbar, da keine Vokabeldaten geladen wurden.");
+                        return;
+                    }
+                    aiSpeak("Vokabel-Filter du ändern möchtest?");
+                    currentQuizType = 'vocabulary'; requestFilters();
+                } else aiSpeak("Filter nur für Vokabelmodus verfügbar.");
+            });
+        }
+        
+        if (downloadButton) downloadButton.addEventListener('click', downloadMissedItemsAsTXT);
+        
+        // --- START GAME ---
+        loadGameData();
+    </script>
+</body>
+</html>
